@@ -22,6 +22,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.displayfeature.hbm.enable=true \
     sys.displayfeature_hidl=true
 
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.cpurend.vsync=false
+
 # Build Unofficial
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.havoc.maintainer=savsir
