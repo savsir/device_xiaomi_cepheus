@@ -34,3 +34,6 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cepheus
 TARGET_RECOVERY_DEVICE_MODULES := libinit_cepheus
+
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
