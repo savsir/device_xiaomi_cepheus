@@ -15,9 +15,6 @@ TARGET_OTA_ASSERT_DEVICE := cepheus
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := cepheus
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 
@@ -27,5 +24,16 @@ TARGET_KERNEL_CONFIG := cepheus_defconfig
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/dev/input/event4"
+TARGET_TAP_TO_WAKE_EVENT_NODE := "/dev/input/event4"
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+# Vendor init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cepheus
+TARGET_RECOVERY_DEVICE_MODULES := libinit_cepheus
+
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
