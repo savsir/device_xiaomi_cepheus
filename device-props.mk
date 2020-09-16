@@ -26,6 +26,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.cpurend.vsync=false
 
-# Build Unofficial
+# Build Official
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.havoc.maintainer=savsir

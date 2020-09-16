@@ -16,12 +16,17 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_FACE_UNLOCK := true
+HAVOC_MAINTAINER := Savsır Cankat Özbay (savsir)
+HAVOC_GROUP_URL := https://t.me/havoc_cepheus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="cepheus" \
     TARGET_DEVICE="cepheus"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Build Official
+export export HAVOC_BUILD_TYPE=Official
 
 # Include firmware
 $(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
